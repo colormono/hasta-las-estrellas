@@ -1,6 +1,6 @@
 # Hasta las Estrellas
 
-_Cielo, el mundo está ahí para compartirlocon quién quieras... si es tu deseo._
+_Cielo, el mundo está ahí para compartirlo con quién quieras... si es tu deseo._
 
 ![Display v1](./cover.jpg)
 
