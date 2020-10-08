@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:none;stroke:#000000;stroke-width:0.5669;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#231F20;stroke-miterlimit:10;}
+</style>
+<g id="base">
+</g>
+<g id="imagen" class="st0">
+	
+		<image style="display:inline;overflow:visible;enable-background:new    ;" width="4000" height="4000" xlink:href="8B3B6708CA87CEB0.png"  transform="matrix(1 0 0 1 -1702 -1579.1102)">
+	</image>
+</g>
+<g id="constelaciones">
+</g>
+<g id="estrellas">
+</g>
+<g id="estrellas2">
+	<g>
+		<line class="st1" x1="11" y1="12" x2="1" y2="2"/>
+		<line class="st1" x1="584" y1="12" x2="594" y2="2"/>
+		<line class="st1" x1="11" y1="713" x2="1" y2="723"/>
+		<line class="st1" x1="584" y1="713" x2="594" y2="723"/>
+	</g>
+	<circle class="st2" cx="297.7" cy="297.2" r="242.1"/>
+	<circle class="st2" cx="297.7" cy="297.2" r="242.9"/>
+	<circle class="st2" cx="297.7" cy="297.2" r="242.9"/>
+	<circle class="st2" cx="297.7" cy="297.2" r="243.3"/>
+</g>
+</svg>

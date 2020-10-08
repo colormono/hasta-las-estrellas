@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 864 864" style="enable-background:new 0 0 864 864;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{font-family:'DankMono-Regular';}
+	.st2{font-size:8px;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#000000;stroke-width:0.3;}
+</style>
+<g id="Layer_1">
+	<circle class="st0" cx="431.9" cy="432.3" r="375.6"/>
+	<line class="st0" x1="431.9" y1="56.7" x2="431.9" y2="807.9"/>
+	<line class="st0" x1="56.4" y1="432.3" x2="807.5" y2="432.3"/>
+	<rect x="56.4" y="56.7" class="st0" width="751.2" height="751.2"/>
+	<text transform="matrix(1 0 0 1 63.6227 68.7193)" class="st1 st2">132.5x132.5</text>
+	<text transform="matrix(1 0 0 1 60.1231 799.3862)" class="st1 st2">132.5x132.5</text>
+	<text transform="matrix(1 0 0 1 750.2621 68.7196)" class="st1 st2">132.5x132.5</text>
+	<text transform="matrix(1 0 0 1 750.262 799.3865)" class="st1 st2">132.5x132.5</text>
+	<g>
+		<g>
+			<rect x="321.3" y="360" class="st3" width="221.1" height="144.6"/>
+			<rect x="329.8" y="375.6" class="st3" width="204.1" height="113.4"/>
+		</g>
+		<text transform="matrix(1 0 0 1 321.2858 354.2193)" class="st1 st2">78x51</text>
+		<line class="st0" x1="329.8" y1="375.6" x2="533.9" y2="489"/>
+		<line class="st0" x1="329.8" y1="489" x2="533.9" y2="375.6"/>
+	</g>
+	<circle class="st0" cx="431.8" cy="432" r="56.2"/>
+</g>
+<g id="marcasDeCorte">
+	<g>
+		<line class="st4" x1="55.9" y1="0" x2="55.9" y2="36"/>
+		<line class="st4" x1="0" y1="54" x2="36" y2="54"/>
+		<line class="st4" x1="0" y1="810" x2="36" y2="810"/>
+		<line class="st4" x1="55.9" y1="864" x2="55.9" y2="828"/>
+		<line class="st4" x1="808" y1="0" x2="808" y2="36"/>
+		<line class="st4" x1="864" y1="54" x2="828" y2="54"/>
+		<line class="st4" x1="864" y1="810" x2="828" y2="810"/>
+		<line class="st4" x1="808" y1="864" x2="808" y2="828"/>
+	</g>
+</g>
+</svg>

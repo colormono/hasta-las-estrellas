@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>D3-Celestial Starry Custom Sky Map</title>
+    <script type="text/javascript" src="../lib/d3.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../lib/d3.geo.projection.min.js"
+    ></script>
+    <script type="text/javascript" src="../dist/celestial0.4.js"></script>
+    <link rel="stylesheet" href="../celestial.css" />
+  </head>
+  <body>
+    <div id="celestial-form"></div>
+    <button id="time_button">Change time</button>
+    <button id="location_button">Change location</button>
+    <button id="download_button">Download</button>
+    <div id="map" style="max-width: 500px"></div>
+
+    <script type="text/javascript">
+      /* 
+        D3-Celestial sky map
+        Copyright 2015 Olaf Frohn https://github.com/ofrohn, see LICENSE
+      */
+      console.log('v0.2');
+
+      // Properties different from default
+      var config = {
+        width: 1000,
+        projection: 'stereographic', // Map projection used: airy, aitoff, armadillo, august, azimuthalEqualArea, azimuthalEquidistant, baker, berghaus, boggs, bonne, bromley, collignon, craig, craster, cylindricalEqualArea, cylindricalStereographic, eckert1, eckert2, eckert3, eckert4, eckert5, eckert6, eisenlohr, equirectangular, fahey, foucaut, ginzburg4, ginzburg5, ginzburg6, ginzburg8, ginzburg9, gringorten, hammer, hatano, healpix, hill, homolosine, kavrayskiy7, lagrange, larrivee, laskowski, loximuthal, mercator, miller, mollweide, mtFlatPolarParabolic, mtFlatPolarQuartic, mtFlatPolarSinusoidal, naturalEarth, nellHammer, orthographic, patterson, polyconic, rectangularPolyconic, robinson, sinusoidal, stereographic, times, twoPointEquidistant, vanDerGrinten, vanDerGrinten2, vanDerGrinten3, vanDerGrinten4, wagner4, wagner6, wagner7, wiechel, winkel3
+        transform: 'equatorial', // Coordinate transformation: equatorial (default), ecliptic, galactic, supergalactic
+        background: '#FF0000', // Background color or gradient
+        container: 'map', // ID of parent element, e.g. div
+        datapath: '../data/', // Path/URL to data files, empty = subfolder 'data'
+        stars: {
+          show: true, // Show stars
+          limit: 4, // Show only stars brighter than limit magnitude
+          colors: true, // Show stars in spectral colors, if not use "color"
+          color: '#000000', // Default color for stars
+          names: false, // Show star names (css-class starname)
+          proper: false, // Show proper names (if none shows designation)
+          desig: false, // Show designation (Bayer, Flamsteed, Variable star, Gliese, Draper, Hipparcos, whichever applies first)
+          namelimit: 2.5, // Show only names for stars brighter than namelimit
+          size: 7, // Maximum size (radius) of star circle in pixels
+          data: 'stars.6.json' // Data source for stellar data
+        },
+        dsos: {
+          show: false, // Show Deep Space Objects (css-class per type)
+          limit: 6, // Show only DSOs brighter than limit magnitude
+          names: true, // Show DSO names
+          desig: true, // Show short DSO names
+          namelimit: 4, // Show only names for DSOs brighter than namelimit
+          data: 'dsos.bright.json' // Data source for DSOs
+        },
+        constellations: {
+          show: true, // Show constellations
+          names: false, // Show constellation names (css-class: constname)
+          desig: false, // Show short constellation names (3 letter designations)
+          lines: true, // Show constellation lines (css-class: constline)
+          bounds: false // Show constellation boundaries (css-class: boundaryline)
+        },
+        mw: {
+          show: false // Show Milky Way as filled polygons (css-class: mw)
+        },
+        lines: {
+          graticule: false, // Show graticule lines (css-class: gridline)
+          equatorial: false, // Show equatorial plane (css-class: equatorial)
+          ecliptic: false, // Show ecliptic plane (css-class: ecliptic)
+          galactic: false, // Show galactic plane (css-class: galactic)
+          supergalactic: false, // Show supergalactic plane (css-class: supergalactic)
+          mars: false
+        }
+      };
+      Celestial.display(config);
+
+      //Celestial.date(new Date(1983, 9 - 1, 16, 21, 0, 0));
+      //Celestial._location(-34.6198, -58.5241);
+      //Celestial._go();
+
+      document.getElementById('time_button').onclick = () => {
+        Celestial.date(new Date(1983, 9 - 1, 16, 21, 0, 0));
+        Celestial._go();
+      };
+
+      document.getElementById('location_button').onclick = () => {
+        Celestial._location(-34.6198, -58.5241);
+        Celestial._go();
+      };
+
+      var button = document.getElementById('download_button');
+      button.addEventListener('click', function(e) {
+        var svgData = document.querySelector('#map svg').outerHTML;
+        var svgBlob = new Blob([svgData], {
+          type: 'image/svg+xml;charset=utf-8'
+        });
+        var svgUrl = URL.createObjectURL(svgBlob);
+        var downloadLink = document.createElement('a');
+        downloadLink.href = svgUrl;
+        downloadLink.download = 'myCielo.svg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      });
+    </script>
+    <footer id="d3-celestial-footer">
+      <p>
+        <a href="https://github.com/ofrohn/d3-celestial"><b>D3-Celestial</b></a>
+        released under
+        <a href="http://opensource.org/licenses/BSD-3-Clause">BSD license</a>.
+        Copyright 2015-17
+        <a href="http://armchairastronautics.blogspot.com/" rel="author"
+          >Olaf Frohn</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
